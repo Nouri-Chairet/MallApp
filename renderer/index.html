@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self Improvement Coach</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header>
+        <h1>Self Improvement Coach</h1>
+        <p>Track your day, build momentum, and stay focused.</p>
+      </header>
+
+      <section class="grid">
+        <div class="panel">
+          <h2>Today’s Goals</h2>
+          <div id="goals"></div>
+        </div>
+
+        <div class="panel">
+          <h2>Daily Score</h2>
+          <div class="score-wrap">
+            <div>
+              <span class="label">Points today</span>
+              <strong id="todayPoints">0</strong>
+            </div>
+            <div>
+              <span class="label">Target</span>
+              <strong id="todayTarget">0</strong>
+            </div>
+            <div>
+              <span class="label">All-time points</span>
+              <strong id="lifetimePoints">0</strong>
+            </div>
+          </div>
+
+          <button id="completeDayBtn" class="primary">Complete Day Reflection</button>
+          <p id="endOfDayMessage" class="message"></p>
+        </div>
+
+        <div class="panel">
+          <h2>Milestones</h2>
+          <div id="milestones"></div>
+          <p id="milestoneQuote" class="message"></p>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

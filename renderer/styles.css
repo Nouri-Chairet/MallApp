@@ -1,0 +1,148 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #22c55e;
+  --danger: #f97316;
+  --border: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1e293b 0%, var(--bg) 50%);
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.5rem 0 2rem;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.panel {
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.goal-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.goal-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.goal-top small {
+  color: var(--muted);
+}
+
+.goal-controls {
+  margin-top: 0.65rem;
+}
+
+input[type='number'] {
+  width: 100%;
+  margin-top: 0.35rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  padding: 0.5rem;
+  background: #0b1220;
+  color: var(--text);
+}
+
+label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.score-wrap {
+  display: grid;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+strong {
+  font-size: 1.4rem;
+}
+
+.primary {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: var(--accent);
+  color: #04210d;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.message {
+  margin-top: 1rem;
+  color: #dbeafe;
+  min-height: 3.5rem;
+}
+
+.milestone-item {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.milestone-item.done {
+  border-color: var(--accent);
+}
+
+.progress {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
