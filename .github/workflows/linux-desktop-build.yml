@@ -2,6 +2,8 @@ name: Build Linux Desktop App
 
 on:
   push:
+    branches:
+      - master
   pull_request:
   workflow_dispatch:
 
